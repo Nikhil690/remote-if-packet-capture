@@ -22,10 +22,10 @@ ssh <user>@<remote ip address> "sudo tcpdump -s 0 -U -n -w - -i <interface name>
 ```
 and for multiple ports:
 ```
-ssh <user>@<remote ip address> "sudo tcpdump -S 0 -U -n -w - -i <interface name> not port <port no.> and not port <port no.>" > /tmp/filename
+ssh <user>@<remote ip address> "sudo tcpdump -s 0 -U -n -w - -i <interface name> not port <port no.> and not port <port no.>" > /tmp/filename
 ```
 
 and if the remote host require sudo password:
 ```
-ssh <user>@<remote ip address> "echo <password> | sudo -S tcpdump -s 0 -U -n -w - -i <interface name> not port <port no.> and not port <port no.>" > /tmp/filename
+ssh <user>@<remote ip address> "echo <password> | sudo -S tcpdump -S 0 -U -n -w - -i <interface name> not port <port no.> and not port <port no.>" > /tmp/filename
 
